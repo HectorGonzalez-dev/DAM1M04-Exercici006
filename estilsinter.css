@@ -1,0 +1,185 @@
+/* ------------------------------------
+    ESTILOS GENERALES SIN TOCAR GLOBAL
+------------------------------------ */
+.body-bg {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* HEADER / NAVBAR */
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 50;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #b30000;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #b30000;
+    font-weight: bold;
+    transition: .3s;
+}
+.nav-link:hover {
+    color: green;
+}
+
+/* MENÚ MÓVIL */
+#menu-toggle { display: none; }
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #b30000;
+}
+
+@media (max-width: 700px) {
+    .nav-list {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 200px;
+        padding: 10px;
+        border-left: 3px solid #b30000;
+        border-bottom: 3px solid #b30000;
+        display: none;
+        animation: showMobile .3s ease;
+    }
+
+    @keyframes showMobile {
+        from {opacity: 0; transform: translateY(-10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    #menu-toggle:checked + label + nav ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* TABS */
+.tabs {
+    margin: 40px;
+    background: rgba(255,255,255,0.75);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #b30000;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+.tab-btn:hover {
+    background: #ffe6e6;
+    transform: scale(1.04);
+}
+
+.content {
+    display: none;
+    margin-top: 15px;
+    padding: 20px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+}
+
+/* ACTIVACIÓN CON :HAS */
+#pagina-interaccio:has(#tab1:checked) .content-1 { display: block; }
+#pagina-interaccio:has(#tab2:checked) .content-2 { display: block; }
+#pagina-interaccio:has(#tab3:checked) .content-3 { display: block; }
+
+/* CARRUSEL */
+.carousel {
+    margin: 40px auto;
+    width: 320px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.carousel-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    color: #b30000;
+}
+
+.carousel-img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#pagina-interaccio:has(#c1:checked) .img1 { display: block; }
+#pagina-interaccio:has(#c2:checked) .img2 { display: block; }
+#pagina-interaccio:has(#c3:checked) .img3 { display: block; }
+
+.carousel-controls label {
+    cursor: pointer;
+    background: white;
+    padding: 6px 12px;
+    border: 2px solid #b30000;
+    margin: 5px;
+    border-radius: 6px;
+    transition: .3s;
+}
+.carousel-controls label:hover {
+    background: #ffe6e6;
+}
+
+/* SECCIÓN EXTRA */
+.extra {
+    margin: 40px;
+    background: rgba(255,255,255,0.8);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.extra h3 {
+    color: #b30000;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.extra p {
+    font-size: 15px;
+    margin-top: 10px;
+}

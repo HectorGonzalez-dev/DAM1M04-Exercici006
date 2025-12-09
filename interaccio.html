@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navidad Interactiva</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="estilsinter.css">
+    </head>
+
+    <body class="body-bg" id="pagina-interaccio">
+
+        <!-- HEADER -->
+        <header class="header">
+            <h2 class="header-title">
+                <span class="material-icons-round">ac_unit</span>
+                Nadal Interactivo
+            </h2>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="material-icons-round">menu</span>
+            </label>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Formulario</a></li>
+                    <li><a class="nav-link" href="interaccio.html">Interacción</a></li>
+                    <li><a class="nav-link" href="interaccio.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- TABS -->
+        <section class="tabs">
+
+            <input type="radio" name="tab" id="tab1" hidden checked>
+            <input type="radio" name="tab" id="tab2" hidden>
+            <input type="radio" name="tab" id="tab3" hidden>
+
+            <label for="tab1" class="tab-btn">
+                <span class="material-icons-round">park</span>
+                Pestaña 1
+            </label>
+
+            <label for="tab2" class="tab-btn">
+                <span class="material-icons-round">card_giftcard</span>
+                Pestaña 2
+            </label>
+
+            <label for="tab3" class="tab-btn">
+                <span class="material-icons-round">ac_unit</span>
+                Pestaña 3
+            </label>
+
+            <div class="content content-1">
+                ¡Bienvenido a la primera pestaña! Aquí puedes explorar contenido navideño con estilos y animaciones mejoradas.
+            </div>
+
+            <div class="content content-2">
+                Esta es la segunda pestaña, llena de regalos, estilo y diseño moderno con Material Icons.
+            </div>
+
+            <div class="content content-3">
+                ¡Has llegado a la tercera pestaña! Perfecta para disfrutar del invierno y las decoraciones.
+            </div>
+        </section>
+
+
+        <!-- CARRUSEL -->
+        <section class="carousel">
+
+            <h3 class="carousel-title">
+                <span class="material-icons-round">celebration</span>
+                Carrusel Navideño
+            </h3>
+
+            <input type="radio" name="car" id="c1" hidden checked>
+            <input type="radio" name="car" id="c2" hidden>
+            <input type="radio" name="car" id="c3" hidden>
+
+            <img src="https://i.imgur.com/MO9cWGe.jpeg" class="carousel-img img1">
+            <img src="https://i.imgur.com/zQJrJdB.jpeg" class="carousel-img img2">
+            <img src="https://i.imgur.com/FiX0kHx.jpeg" class="carousel-img img3">
+
+            <div class="carousel-controls">
+                <label for="c1">1</label>
+                <label for="c2">2</label>
+                <label for="c3">3</label>
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN EXTRA -->
+        <section class="extra">
+            <h3>
+                <span class="material-icons-round">info</span>
+                Información Extra
+            </h3>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </section>
+
+    </body>
+</html>

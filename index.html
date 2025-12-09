@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulari Demo</title>
+        <link rel="stylesheet" href="estils.css">
+    </head>
+    <body>
+        <form>
+            <div class="center-div">
+                <h2>Formulario navideño</h2>
+
+                <label>Nombre completo <span class="obligatorio">*</span></label>
+                <input type="text" required pattern="^[A-Za-zÀ-ÿ]+(?:\s[A-Za-zÀ-ÿ]+){1,2}$" title="Introduce tu nombre completo" />
+
+                <label>Correo electrónico <span class="obligatorio">*</span></label>
+                <input type="email" required />
+
+                <label>Teléfono</label>
+                <input type="tel" class="opcional" pattern="^\+?[0-9\s\-]{7,15}$" title="Máximo 15 cifras; puede incluir +, espacios o guiones" />
+
+                <label>Edad</label>
+                <input type="number" min="1" max="120" step="1" class="opcional" />
+
+                <label>Fecha de nacimiento <span class="obligatorio">*</span></label>
+                <input type="date" required />
+
+                <label>Franja horária</label>
+                <input type="time" class="opcional" />
+
+                <label>Color preferido</label>
+                <input type="color" class="opcional" />
+
+                <label>Control deslizante</label>
+                <input type="range" min="0" max="100" />
+
+                <label>Aficiones</label>
+                <div class="opcio"><input type="checkbox" /> Deportes</div>
+                <div class="opcio"><input type="checkbox" /> Música</div>
+                <div class="opcio"><input type="checkbox" /> Videojuegos</div>
+
+                <label>Nivel de estudios</label>
+                <div class="opcio"><input type="radio" name="estudis" /> ESO</div>
+                <div class="opcio"><input type="radio" name="estudis" /> Bachillerato</div>
+                <div class="opcio"><input type="radio" name="estudis" /> CFGM</div>
+                <div class="opcio"><input type="radio" name="estudis" /> CFGS</div>
+
+                <label>País</label>
+                <select>
+                <option>España</option>
+                <option>Francia</option>
+                <option>Italia</option>
+                <option>Alemania</option>
+                </select>
+
+                <label>Comentarios</label>
+                <textarea rows="4"></textarea>
+
+                <button type="submit" class="submit-btn">Enviar</button>
+                <button type="reset" class="reset-btn">Borrar</button>
+            </div>
+        </form>
+    </body>
+</html>

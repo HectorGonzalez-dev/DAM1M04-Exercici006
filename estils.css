@@ -1,12 +1,14 @@
 
-/* --- Estils generals --- */
-body {
+/* --- Estilos form --- */
+.body_form {
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background-image: url("./assets/img/form_bg.jpg");
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
     padding: 40px;
 }
 
-form {
+.formulario {
     display: flex;
     max-width: 600px;
     margin: auto;
@@ -18,13 +20,13 @@ form {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-label {
+.apartado {
     font-weight: bold;
     display: block;
     margin-top: 15px;
 }
 
-input, select, textarea {
+.formulario input, .formulario select, .formulario textarea {
     width: 90%;
     padding: 10px;
     border-radius: 6px;
@@ -33,24 +35,24 @@ input, select, textarea {
     margin-top: 5px;
 }
 
-textarea {
+.formulario textarea {
     resize: none;
 }
 
-input:focus, textarea:focus, select:focus {
+.formulario input:focus, .formulario textarea:focus, .formulario select:focus {
     outline-color: #007bff;
     box-shadow: 0 0 8px rgba(0,123,255,0.4);
 }
 
-input:valid {
+.formulario input:valid {
     border-color: #28a745;
 }
 
-.opcional:valid {
+.formulario .opcional:valid {
     border-color: #000000;
 }
 
-input:invalid {
+.formulario input:invalid {
     border-color: #dc3545;
 }
 
@@ -75,7 +77,7 @@ input:invalid {
     height: 18px;
 }
 
-button {
+.formulario button {
     margin-top: 20px;
     padding: 10px 15px;
     border: none;

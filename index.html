@@ -6,47 +6,47 @@
         <title>Formulari Demo</title>
         <link rel="stylesheet" href="estils.css">
     </head>
-    <body>
-        <form>
+    <body class="body_form">
+        <form class="formulario">
             <div class="center-div">
                 <h2>Formulario navideño</h2>
 
-                <label>Nombre completo <span class="obligatorio">*</span></label>
+                <label class="apartado">Nombre completo <span class="obligatorio">*</span></label>
                 <input type="text" required pattern="^[A-Za-zÀ-ÿ]+(?:\s[A-Za-zÀ-ÿ]+){1,2}$" title="Introduce tu nombre completo" />
 
-                <label>Correo electrónico <span class="obligatorio">*</span></label>
+                <label class="apartado">Correo electrónico <span class="obligatorio">*</span></label>
                 <input type="email" required />
 
-                <label>Teléfono</label>
+                <label class="apartado">Teléfono</label>
                 <input type="tel" class="opcional" pattern="^\+?[0-9\s\-]{7,15}$" title="Máximo 15 cifras; puede incluir +, espacios o guiones" />
 
-                <label>Edad</label>
+                <label class="apartado">Edad</label>
                 <input type="number" min="1" max="120" step="1" class="opcional" />
 
-                <label>Fecha de nacimiento <span class="obligatorio">*</span></label>
+                <label class="apartado">Fecha de nacimiento <span class="obligatorio">*</span></label>
                 <input type="date" required />
 
-                <label>Franja horária</label>
+                <label class="apartado">Franja horária</label>
                 <input type="time" class="opcional" />
 
-                <label>Color preferido</label>
+                <label class="apartado">Color preferido</label>
                 <input type="color" class="opcional" />
 
-                <label>Control deslizante</label>
+                <label class="apartado">Control deslizante</label>
                 <input type="range" min="0" max="100" />
 
-                <label>Aficiones</label>
+                <label class="apartado">Aficiones</label>
                 <div class="opcio"><input type="checkbox" /> Deportes</div>
                 <div class="opcio"><input type="checkbox" /> Música</div>
                 <div class="opcio"><input type="checkbox" /> Videojuegos</div>
 
-                <label>Nivel de estudios</label>
+                <label class="apartado">Nivel de estudios</label>
                 <div class="opcio"><input type="radio" name="estudis" /> ESO</div>
                 <div class="opcio"><input type="radio" name="estudis" /> Bachillerato</div>
                 <div class="opcio"><input type="radio" name="estudis" /> CFGM</div>
                 <div class="opcio"><input type="radio" name="estudis" /> CFGS</div>
 
-                <label>País</label>
+                <label class="apartado">País</label>
                 <select>
                 <option>España</option>
                 <option>Francia</option>
@@ -54,7 +54,7 @@
                 <option>Alemania</option>
                 </select>
 
-                <label>Comentarios</label>
+                <label class="apartado">Comentarios</label>
                 <textarea rows="4"></textarea>
 
                 <button type="submit" class="submit-btn">Enviar</button>

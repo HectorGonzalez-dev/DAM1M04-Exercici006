@@ -4,13 +4,119 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Navidad Interactiva</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-        <link rel="stylesheet" href="estilsinter.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <link rel="stylesheet" href="estils.css">
     </head>
 
-    <body class="body-bg" id="pagina-interaccio">
+    <body class="body_inter" id="pagina-interaccio">
+        <nav class="navbar">
+            <div class="logo">FELIZ NAVIDAD</div>
 
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-icon">
+            <span class="material-icons">menu</span>
+            </label>
+
+            <ul class="menu">
+                <li><a href="./index.html">Formulario</a></li>
+                <li><a href="./interaccio.html">Interactividad</a></li>
+            </ul>
+        </nav>
+
+        <div class="seccion">
+            <div class="tabs">
+                <!-- Radio buttons -->
+                <input type="radio" name="tab" id="tab1" checked>
+                <input type="radio" name="tab" id="tab2">
+                <input type="radio" name="tab" id="tab3">
+
+                <!-- Tab buttons -->
+                <div class="tabButtons">
+                    <label class="tabButton tabButton1" for="tab1">
+                        <span class="material-icons-outlined">loyalty</span> Regalo 1
+                    </label>
+                    <label class="tabButton tabButton2" for="tab2">
+                        <span class="material-icons-outlined">redeem</span> Regalo 2
+                    </label>
+                    <label class="tabButton tabButton3" for="tab3">
+                        <span class="material-icons-outlined">inbox</span> Regalo 3
+                    </label>
+                </div>
+
+                <!-- Tab content -->
+                <div class="tab-content content-1">
+                    <div class="tab-inner">
+                        <div class="tab-text">
+                            <h2>Un pollo</h2>
+                            <p>
+                                Un regal original i divertit, ideal per sorprendre amb un toc d’humor.
+                                Perfecte per a qui aprecia els detalls inesperats.
+                            </p>
+                        </div>
+                        <img src="./assets/img/chicken.jpg" alt="Imatge d'un pollo">
+                    </div>
+                </div>
+
+                <div class="tab-content content-2">
+                    <div class="tab-inner">
+                        <div class="tab-text">
+                            <h2>Un palo</h2>
+                            <p>
+                                Senzill però versàtil, aquest regal simbolitza la utilitat en estat pur.
+                                Ideal per als amants de les coses simples i funcionals.
+                            </p>
+                        </div>
+                        <img src="./assets/img/palo.jpg.png" alt="Imatge d'un palo">
+                    </div>
+                </div>
+
+                <div class="tab-content content-3">
+                    <div class="tab-inner">
+                        <div class="tab-text">
+                            <h2>Un colchon</h2>
+                            <p>
+                                Pensat per al descans i el confort, aquest regal és perfecte per
+                                desconnectar i recarregar energies després d’un llarg dia.
+                            </p>
+                        </div>
+                        <img src="./assets/img/relax.jpg" alt="Imatge d'un colchon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h1>Carrusel d'Imatges</h1>
+
+            <div class="carousel">
+                <!-- Radio buttons -->
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+
+                <!-- Slides -->
+                <div class="slides">
+                    <div class="slide">
+                        <img src="./assets/img/christmas1.jpg" alt="Primera diapositiva">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/img/christmas2.jpg" alt="Segona diapositiva">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/img/christmas3.jpg" alt="Tercera diapositiva">
+                    </div>
+                </div>
+
+                <!-- Previous arrows -->
+                <label for="slide1" class="navArrow prev arrowPrev2">‹</label>
+                <label for="slide2" class="navArrow prev arrowPrev3">‹</label>
+
+                <!-- Next arrows -->
+                <label for="slide2" class="navArrow next arrowNext1">›</label>
+                <label for="slide3" class="navArrow next arrowNext2">›</label>
+            </div>
+        </div>
 
     </body>
 </html>

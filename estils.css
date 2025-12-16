@@ -17,7 +17,6 @@
     font-weight: bold;
 }
 
-/* MENU ESCRIPTORI */
 .menu {
     display: flex;
     gap: 1.5rem;
@@ -34,12 +33,10 @@
     color: #38bdf8;
 }
 
-/* CHECKBOX OCULT */
 #menu-toggle {
     display: none;
 }
 
-/* ICONA HAMBURGUESA */
 .menu-icon {
     display: none;
     cursor: pointer;
@@ -49,7 +46,6 @@
     font-size: 32px;
 }
 
-/* MODE MÒBIL */
 @media (max-width: 768px) {
     .menu {
         position: absolute;
@@ -70,7 +66,6 @@
         padding: 1rem 0;
     }
 
-    /* Mostrar menú quan el checkbox està activat */
     #menu-toggle:checked ~ .menu {
         max-height: 300px;
     }
@@ -82,10 +77,19 @@
 
 /* --- Estilos form --- */
 .body_form {
-    font-family: Arial, sans-serif;
     background-image: url("./assets/img/form_bg.jpg");
     background-color: rgba(255, 255, 255, 0.2);
     background-blend-mode: lighten;
+}
+
+.body_inter {
+    background-image: url("./assets/img/inter_bg.jpg");
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+}
+
+#pagina-interaccio {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -180,4 +184,226 @@
     background: #6c757d;
     color: white;
     margin-left: 10px;
+}
+
+/* Estilos interactividad */
+
+.seccion {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs {
+    width: 80%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+.tab-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tab-text {
+    flex: 1;
+}
+
+.tab-inner img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.tabButtons {
+    display: flex;
+    background: #f5f5f5;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tabButton {
+    border-bottom: 3px solid transparent;
+    color: #666;
+    cursor: pointer;
+    flex: 1;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.tabButton:hover {
+    background: #ebebeb;
+    color: #333;
+}
+
+body:has(#tab1:checked) .tabButtons .tabButton1,
+body:has(#tab2:checked) .tabButtons .tabButton2,
+body:has(#tab3:checked) .tabButtons .tabButton3 {
+    background: white;
+    border-bottom-color: #ea6f66;
+    color: #ea6f66;
+}
+
+.tab-content {
+    animation: fadeIn 0.4s ease-in;
+    display: none;
+    padding: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(10px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+#pagina-interaccio:has(#tab1:checked) .content-1 { display:block; }
+#pagina-interaccio:has(#tab2:checked) .content-2 { display:block; }
+#pagina-interaccio:has(#tab3:checked) .content-3 { display:block; }
+
+.tab-content h2 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tab-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.tab-content ul {
+    color: #555;
+    line-height: 1.8;
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .tab-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tab-inner img {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+
+.carousel input {
+    display: none;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.4);
+    overflow: hidden;
+    position: relative;
+}
+
+/* CONTENEDOR DE SLIDES */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* SLIDE */
+.slide {
+    min-width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+/* IMAGEN */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* POSICIÓN DE CADA SLIDE */
+body:has(#slide1:checked) .slides { transform: translateX(0%); }
+body:has(#slide2:checked) .slides { transform: translateX(-100%); }
+body:has(#slide3:checked) .slides { transform: translateX(-200%); }
+body:has(#slide4:checked) .slides { transform: translateX(-300%); }
+
+/* FLECHAS */
+.navArrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    color: #000000;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.navArrow:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.prev { left: 1rem; }
+.next { right: 1rem; }
+
+/* VISIBILIDAD DE FLECHAS */
+body:has(#slide1:checked) .arrowNext1 { display: flex; }
+
+body:has(#slide2:checked) .arrowPrev2,
+body:has(#slide2:checked) .arrowNext2 { display: flex; }
+
+body:has(#slide3:checked) .arrowPrev3,
+body:has(#slide3:checked) .arrowNext3 { display: flex; }
+
+body:has(#slide4:checked) .arrowPrev4 { display: flex; }
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .carousel {
+        width: 95%;
+    }
+
+    .slide {
+        height: 280px;
+    }
+
+    .navArrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .prev { left: 0.5rem; }
+    .next { right: 0.5rem; }
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Responsive</title>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR GENERAL */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #1f2933;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* MENU ESCRIPTORI */
+    .menu {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #38bdf8;
+    }
+
+    /* CHECKBOX OCULT */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* ICONA HAMBURGUESA */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    .menu-icon .material-icons {
+      font-size: 32px;
+    }
+
+    /* MODE MÒBIL */
+    @media (max-width: 768px) {
+      .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #1f2933;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      .menu li {
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      /* Mostrar menú quan el checkbox està activat */
+      #menu-toggle:checked ~ .menu {
+        max-height: 300px;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">LOGO</div>
+
+    <!-- Checkbox ocult -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Icona hamburguesa -->
+    <label for="menu-toggle" class="menu-icon">
+      <span class="material-icons">menu</span>
+    </label>
+
+    <!-- Menú -->
+    <ul class="menu">
+      <li><a href="#">Inici</a></li>
+      <li><a href="#">Serveis</a></li>
+      <li><a href="#">Projectes</a></li>
+      <li><a href="#">Contacte</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

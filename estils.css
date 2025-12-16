@@ -1,17 +1,102 @@
 
+/* Estilos navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #1f2933;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* MENU ESCRIPTORI */
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #38bdf8;
+}
+
+/* CHECKBOX OCULT */
+#menu-toggle {
+    display: none;
+}
+
+/* ICONA HAMBURGUESA */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .material-icons {
+    font-size: 32px;
+}
+
+/* MODE MÒBIL */
+@media (max-width: 768px) {
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 0px;
+        flex-direction: column;
+        background: #1f2933;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /* Mostrar menú quan el checkbox està activat */
+    #menu-toggle:checked ~ .menu {
+        max-height: 300px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
 /* --- Estilos form --- */
 .body_form {
     font-family: Arial, sans-serif;
     background-image: url("./assets/img/form_bg.jpg");
     background-color: rgba(255, 255, 255, 0.2);
     background-blend-mode: lighten;
-    padding: 40px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .formulario {
     display: flex;
     max-width: 600px;
     margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
     background: #fff;
     padding: 20px;
     border-radius: 12px;

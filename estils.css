@@ -407,3 +407,11 @@ body:has(#slide4:checked) .arrowPrev4 { display: flex; }
     .prev { left: 0.5rem; }
     .next { right: 0.5rem; }
 }
+
+.titulillo {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+}

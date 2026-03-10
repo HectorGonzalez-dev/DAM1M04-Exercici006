@@ -115,6 +115,10 @@
     margin-top: 15px;
 }
 
+.color-preferido {
+    height: 100px;
+}
+
 .formulario input, .formulario select, .formulario textarea {
     width: 90%;
     padding: 10px;
